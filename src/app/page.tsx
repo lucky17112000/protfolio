@@ -50,7 +50,7 @@ const academicQualifications = [
     institute: "American International University-Bangladesh (AIUB)",
     timeline: "2022 - 2026 (Expected)",
     details:
-      "Core focus: Algorithms, Data Structures, Database Systems, and Software Engineering , system design.",
+      "Core focus: algorithms, data structures, database systems, software engineering, and system design.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function Home() {
         style={{ animationDelay: "80ms" }}
       >
         <a className="brand link-underline" href="#hero">
-          ALAMIN MUSTAFA
+          ALAMIN MUSTAFA RAHIM
         </a>
         <nav className="menu">
           <a className="link-underline" href="#about">
@@ -93,7 +93,7 @@ export default function Home() {
           <div className="hero-content">
             <p className="eyebrow">Software Engineering Portfolio</p>
             <h1>
-              <span className="hero-name">ALAMIN MUSTAFA</span>
+              <span className="hero-name">ALAMIN MUSTAFA RAHIM</span>
               <span className="hero-caret" aria-hidden="true">
                 _
               </span>
@@ -377,7 +377,7 @@ export default function Home() {
               <strong>Problems Solved:</strong> 1000+
             </p>
             <p>
-              <strong>Best Rating(pupil on codeforces):</strong> 1200+
+              <strong>Best Rating (Pupil on Codeforces):</strong> 1200+
             </p>
             <p>
               <strong>Contest Experience:</strong> Regular online contests and
@@ -394,7 +394,10 @@ export default function Home() {
       >
         <div className="section-head">
           <h2>Contact</h2>
-          <a className="btn btn-primary" href="mailto:youremail@example.com">
+          <a
+            className="btn btn-primary"
+            href="mailto:alaminmustafa17112000@gmail.com"
+          >
             Send Message
           </a>
         </div>
@@ -429,12 +432,12 @@ export default function Home() {
         style={{ animationDelay: "560ms" }}
       >
         <p className="footer-copy">
-          © {currentYear} Alamin Mustafa. Crafted with precision.
+          © {currentYear} Alamin Mustafa Rahim. Crafted with precision.
         </p>
         <div className="footer-links">
           <a
             className="link-underline"
-            href="https://github.com/"
+            href="https://github.com/lucky17112000?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -442,13 +445,16 @@ export default function Home() {
           </a>
           <a
             className="link-underline"
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/alamin-mustafa-rahim-433407271/"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
           </a>
-          <a className="link-underline" href="mailto:youremail@example.com">
+          <a
+            className="link-underline"
+            href="mailto:alaminmustafa17112000@gmail.com"
+          >
             Email
           </a>
         </div>

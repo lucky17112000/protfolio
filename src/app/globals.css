@@ -200,7 +200,7 @@ h1 {
   margin: 0;
   font-size: clamp(2.1rem, 7vw, 4.8rem);
   letter-spacing: -0.02em;
-  max-width: 20ch;
+  max-width: 28ch;
 }
 
 .hero-name {
@@ -215,15 +215,19 @@ h1 {
 
 .hero-caret {
   display: inline-block;
-  margin-left: 0.08em;
+  margin-left: 0.12em;
+  font-size: 0.72em;
+  line-height: 1;
+  vertical-align: middle;
   color: #ffffff;
   animation: heroCaretBlink 1s steps(1, end) infinite;
 }
 
 .hero-line {
   display: block;
-  margin-top: 0.9rem;
+  margin-top: 0.35rem;
   font-size: clamp(1rem, 2.7vw, 1.5rem);
+  line-height: 1.35;
   color: var(--muted);
   font-weight: 500;
 }
@@ -276,6 +280,8 @@ h1 {
 .lead {
   max-width: 68ch;
   color: #d2d2d2;
+  margin: 0.5rem 0 1.4rem;
+  line-height: 1.75;
 }
 
 .cta-row {
@@ -283,6 +289,7 @@ h1 {
   flex-wrap: wrap;
   gap: 0.85rem;
   justify-content: center;
+  margin-top: 0.35rem;
 }
 
 .btn {
@@ -383,7 +390,7 @@ h1 {
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.4rem;
 }
 
 .footer {
@@ -694,6 +701,10 @@ h2 {
   align-content: start;
 }
 
+.project-card .btn {
+  margin-top: 0.3rem;
+}
+
 .project-status {
   margin: 0;
   width: fit-content;
@@ -879,6 +890,10 @@ h2 {
   .hero-photo {
     height: clamp(300px, 62vw, 360px);
     width: 100%;
+  }
+
+  .hero-caret {
+    display: none;
   }
 
   .menu {

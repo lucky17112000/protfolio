@@ -1,4 +1,4 @@
-# Alamin Mustafa Portfolio
+# Alamin Mustafa Rahim Portfolio
 
 A modern, minimal, high-contrast developer portfolio built with Next.js App Router, React, TypeScript, and Tailwind CSS v4.
 
@@ -31,15 +31,15 @@ This portfolio highlights:
 
 ```text
 src/
-	app/
-		globals.css
-		layout.tsx
-		page.tsx
+  app/
+    globals.css
+    layout.tsx
+    page.tsx
 public/
-	ecospark.jpg
-	tutor.jpg
-	doctor.jpg
-	pexels-gabriel-passos-71368745-14737807.jpg
+  ecospark.jpg
+  tutor.jpg
+  doctor.jpg
+  pexels-gabriel-passos-71368745-14737807.jpg
 ```
 
 ## Getting Started
