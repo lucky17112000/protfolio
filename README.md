@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alamin Mustafa Portfolio
+
+A modern, minimal, high-contrast developer portfolio built with Next.js App Router, React, TypeScript, and Tailwind CSS v4.
+
+This portfolio highlights:
+
+- Backend/software engineering profile
+- Competitive programming profile
+- Featured projects with live links, GitHub links, and screenshots
+- Responsive, animated, premium black-and-white UI
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- next/font (Google fonts)
+
+## Features
+
+- Hero section with animated typography and profile image
+- Glassmorphism cards and smooth reveal animations
+- Premium CTA buttons with custom hover effects
+- Infinite horizontal project slider
+- Project screenshots from `public` folder
+- About, Skills, Academic Qualification, CP, Contact, and Footer sections
+- Fully responsive across mobile and desktop
+
+## Project Structure
+
+```text
+src/
+	app/
+		globals.css
+		layout.tsx
+		page.tsx
+public/
+	ecospark.jpg
+	tutor.jpg
+	doctor.jpg
+	pexels-gabriel-passos-71368745-14737807.jpg
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open in browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Scripts
 
-## Learn More
+- `npm run dev` - start development server
+- `npm run build` - create production build
+- `npm run start` - run production server
+- `npm run lint` - run ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## How To Customize Content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit the project data in `src/app/page.tsx`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Update Personal Info
 
-## Deploy on Vercel
+- Name in navbar and hero
+- About section text
+- Contact links
+- Footer text
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Update Projects
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Inside the `projects` array, each project supports:
+
+- `name`
+- `description`
+- `stack`
+- `github`
+- `live`
+- `imageLabel`
+- `imageSrc` (example: `/ecospark.jpg`)
+- `upcoming` (optional boolean)
+
+### Update Images
+
+Place images in `public/` and set `imageSrc` in the related project.
+
+Examples:
+
+- `/ecospark.jpg`
+- `/tutor.jpg`
+- `/doctor.jpg`
+
+## Deployment
+
+You can deploy this app on Vercel.
+
+1. Push code to GitHub
+2. Import repository in Vercel
+3. Deploy
+
+## License
+
+This project is for personal portfolio use.
