@@ -95,7 +95,7 @@ export function ScrollIndicator() {
         style={{
           position: "fixed",
           bottom: "2rem",
-          right: "2rem",
+          left: "2rem",
           zIndex: 60,
           width: "42px",
           height: "42px",

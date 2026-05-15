@@ -19,12 +19,24 @@ No test suite is configured.
 
 **Stack:** Next.js App Router, React 19, TypeScript (strict), Tailwind CSS v4, PostCSS.
 
-**Routing:** All pages live under `src/app/`. The only dynamic route is `src/app/projects/[slug]/page.tsx`, which uses `generateStaticParams()` to statically pre-render each project page at build time.
+**Routing:** All pages live under `src/app/`. The only dynamic route is `src/app/projects/[slug]/page.tsx`, which awaits `params` as a Promise (Next.js 15 async params) and uses `generateStaticParams()` to pre-render each project page at build time.
 
-**Data layer:** All project data is defined in `src/data/projects.ts` as a typed `ProjectItem[]` array — no API calls or database. Adding/editing projects means editing that file.
+**Data layer:** All project data lives in `src/data/projects.ts` as a typed `ProjectItem[]` array — no API calls or database. Adding/editing projects means editing that file. Each item has an optional `upcoming?: boolean` flag that signals work-in-progress entries.
 
-**Styling:** Tailwind v4 (imported via `@tailwindcss/postcss`). Custom CSS variables are declared in `src/app/globals.css` — `--accent` (yellow), `--accent-2` (cyan), and `glass` utility class for glassmorphism surfaces. Fluid sizing uses CSS `clamp()`. Fonts are Plus Jakarta Sans (body) and Syne (headers), loaded via `next/font/google` in the root layout.
+**Components:** UI logic lives in `src/components/`. Most components that use scroll listeners, `useEffect`, or browser APIs are marked `"use client"` — including `SpineHost`, `Navbar`, `SkillTree`, `ProjectsSection`, `StatsBanner`, `Footer`, `SmoothScroll`, `MouseSpotlight`, `BlurReveal`, `AutoScroll`, and `ScrollArrow`. Server components (`HeroSection`, `AboutSection`, `ContactSection`, `Marquee`) render no hooks.
 
-**Components:** No component directory — UI is colocated inline within page files. All components are React Server Components by default; none currently use `"use client"`.
+**Layout pattern:** `SpineHost` (`"use client"`) wraps the page in `src/app/page.tsx`. It renders the animated left-rail spine (scroll-linked orb + glowing fill) and sets the `--container-left` CSS custom property from the `.container` element's bounding rect so that `.node-marker` and `.hero-meta` can position themselves relative to the spine at any viewport width.
+
+**Styling:** Tailwind v4 (imported via `@tailwindcss/postcss`). All significant design tokens and component styles are in `src/app/globals.css`. Key CSS variables:
+- `--accent` / `--accent-bright` / `--accent-deep` / `--accent-glow` / `--accent-soft` / `--accent-line` — the blue (`#5BA8FF`) accent family used pervasively
+- `--bg`, `--bg-1`, `--bg-2` — pure-black background variants
+- `--ink`, `--ink-2`, `--ink-3`, `--ink-4` — foreground/text scale
+- `--rule`, `--rule-2` — subtle white-alpha dividers
+- `.theme-green`, `.theme-violet`, `.theme-amber` — swap the entire accent family by adding one of these classes
+
+Fluid sizing uses CSS `clamp()`. Fonts are loaded via `next/font/google` in the root layout:
+- `Space Grotesk` → `--font-display` (headings, numbers)
+- `Inter` → `--font-body` (body text)
+- `JetBrains Mono` → `--font-mono` (labels, nav, code-style UI)
 
 **Path alias:** `@/*` resolves to `src/*`.

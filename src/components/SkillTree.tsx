@@ -169,19 +169,21 @@ function GraphTree() {
       <div className="g-leafrow">
         {TREE.branches.map((b, bi) => (
           <div key={b.id} className="g-leafcluster">
-            {b.leaves.map((label, li) => (
-              <span
-                key={label}
-                ref={(el) => {
-                  if (!leafRefs.current[bi]) leafRefs.current[bi] = []
-                  leafRefs.current[bi][li] = el
-                }}
-                className={"g-leaf " + (b.hot ? "hot " : "") + (seen ? "in" : "")}
-                style={{ transitionDelay: `${900 + bi * 120 + li * 60}ms` }}
-              >
-                {label}
-              </span>
-            ))}
+            <div className="g-leaf-row-inner">
+              {b.leaves.map((label, li) => (
+                <span
+                  key={label}
+                  ref={(el) => {
+                    if (!leafRefs.current[bi]) leafRefs.current[bi] = []
+                    leafRefs.current[bi][li] = el
+                  }}
+                  className={"g-leaf " + (b.hot ? "hot " : "") + (seen ? "in" : "")}
+                  style={{ transitionDelay: `${900 + bi * 120 + li * 60}ms` }}
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>

@@ -1,4 +1,5 @@
 import { ScrollIndicator } from "@/components/ScrollIndicator"
+import { IconGithub, IconLinkedin, IconCodeforces, IconLeetCode, IconCodeChef } from "@/components/icons"
 
 const TOKENS = [
   { t: "Competitive",     cls: "" },
@@ -12,11 +13,11 @@ const TOKENS = [
 ]
 
 const SOCIALS = [
-  { l: "GitHub",     ic: "G",  h: "https://github.com/lucky17112000" },
-  { l: "LinkedIn",   ic: "in", h: "https://www.linkedin.com/in/alamin-mustafa-rahim-433407271/" },
-  { l: "Codeforces", ic: "⌬",  h: "https://codeforces.com/profile/AxonOops" },
-  { l: "CodeChef",   ic: "★",  h: "https://www.codechef.com/users/lucky10000" },
-  { l: "LeetCode",   ic: "▤",  h: "https://leetcode.com/" },
+  { l: "GitHub",     tip: "See my open-source work",  Icon: IconGithub,     h: "https://github.com/lucky17112000" },
+  { l: "LinkedIn",   tip: "Connect professionally",   Icon: IconLinkedin,   h: "https://www.linkedin.com/in/alamin-mustafa-rahim-433407271/" },
+  { l: "Codeforces", tip: "1200+ CF rating",           Icon: IconCodeforces, h: "https://codeforces.com/profile/AxonOops" },
+  { l: "LeetCode",   tip: "800+ problems solved",      Icon: IconLeetCode,   h: "https://leetcode.com/u/lucky17112000/" },
+  { l: "CodeChef",   tip: "Competitive programming",   Icon: IconCodeChef,   h: "https://www.codechef.com/users/lucky10000" },
 ]
 
 export function HeroSection() {
@@ -46,17 +47,16 @@ export function HeroSection() {
       </h1>
 
       <p className="lede reveal in" style={{ transitionDelay: "650ms" }}>
-        Backend-focused full-stack engineer.{" "}
-        <strong>Codeforces 1200+</strong> · <strong>1000+</strong> problems solved across all platforms
-        (Codeforces, LeetCode &amp; CodeChef). Building production REST APIs with <em>Node.js</em>,{" "}
-        <em>Express</em> and PostgreSQL.
+        Backend-focused full-stack engineer. Building production REST APIs with{" "}
+        <em>Node.js</em>, <em>Express</em> and <em>PostgreSQL</em>.{" "}
+        Passionate about clean architecture, type-safe code, and <strong>shipping things that work</strong>.
       </p>
 
       <div className="cta-row reveal in" style={{ transitionDelay: "780ms" }}>
-        <a href="#projects" className="btn btn-primary">
+        <a href="#projects" className="btn btn-primary" data-tip="See what I've shipped">
           View projects <span aria-hidden="true">→</span>
         </a>
-        <a href="#skills" className="btn btn-ghost">Skill tree</a>
+        <a href="#skills" className="btn btn-ghost" data-tip="Explore my skills">Skill tree</a>
       </div>
 
       <div className="socials reveal in" style={{ transitionDelay: "880ms" }}>
@@ -67,11 +67,9 @@ export function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={s.l}
-            title={s.l}
+            data-tip={s.tip}
           >
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700 }}>
-              {s.ic}
-            </span>
+            <s.Icon width={16} height={16} />
           </a>
         ))}
       </div>

@@ -1,10 +1,10 @@
 const CONTACTS = [
-  { l: "Email",      v: "alaminmustafa17112000@gmail.com", ic: "✉",  h: "mailto:alaminmustafa17112000@gmail.com" },
-  { l: "Phone",      v: "+880 1797 160 713",               ic: "☏",  h: "tel:+8801797160713" },
-  { l: "WhatsApp",   v: "Chat on WhatsApp",                ic: "◎",  h: "https://wa.me/8801797160713" },
-  { l: "GitHub",     v: "github.com/lucky17112000",        ic: "G",  h: "https://github.com/lucky17112000" },
-  { l: "LinkedIn",   v: "linkedin.com/in/alamin",          ic: "in", h: "https://www.linkedin.com/in/alamin-mustafa-rahim-433407271/" },
-  { l: "Codeforces", v: "codeforces.com/AxonOops",         ic: "⌬",  h: "https://codeforces.com/profile/AxonOops" },
+  { l: "Email",      tip: "Send me an email — I reply within 24h",  v: "alaminmustafa17112000@gmail.com", ic: "✉",  h: "mailto:alaminmustafa17112000@gmail.com" },
+  { l: "Phone",      tip: "Give me a call",                          v: "+880 1797 160 713",               ic: "☏",  h: "tel:+8801797160713" },
+  { l: "WhatsApp",   tip: "Chat on WhatsApp",                        v: "Chat on WhatsApp",                ic: "◎",  h: "https://wa.me/8801797160713" },
+  { l: "GitHub",     tip: "See my open-source projects",             v: "github.com/lucky17112000",        ic: "G",  h: "https://github.com/lucky17112000" },
+  { l: "LinkedIn",   tip: "Connect with me professionally",          v: "linkedin.com/in/alamin",          ic: "in", h: "https://www.linkedin.com/in/alamin-mustafa-rahim-433407271/" },
+  { l: "Codeforces", tip: "View my CF profile · 1200+ rating",       v: "codeforces.com/AxonOops",         ic: "⌬",  h: "https://codeforces.com/profile/AxonOops" },
 ]
 
 export function ContactSection() {
@@ -55,6 +55,7 @@ export function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="contact-row"
+              data-tip={c.tip}
             >
               <span className="ic">{c.ic}</span>
               <div className="meta">

@@ -242,15 +242,18 @@ function FeatureProject({ p, i }: { p: typeof PROJECTS[0]; i: number }) {
         </div>
         <div className="pf-actions">
           {!p.upcoming && (
-            <a className="btn btn-primary" href={p.live} target="_blank" rel="noopener noreferrer">
+            <a className="btn btn-primary" href={p.live} target="_blank" rel="noopener noreferrer"
+               data-tip="Open live project">
               Live ↗
             </a>
           )}
-          <a className="btn btn-ghost" href={p.github} target="_blank" rel="noopener noreferrer">
+          <a className="btn btn-ghost" href={p.github} target="_blank" rel="noopener noreferrer"
+             data-tip="View source on GitHub">
             View code
           </a>
           {p.upcoming && (
-            <span className="btn btn-ghost" style={{ cursor: "default", opacity: 0.7 }}>
+            <span className="btn btn-ghost" style={{ cursor: "default", opacity: 0.7 }}
+                  data-tip="Work in progress">
               Coming soon
             </span>
           )}
@@ -276,6 +279,8 @@ export function ProjectsSection() {
           href="https://github.com/lucky17112000?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
+          data-tip="Browse all my repositories"
+          data-tip-pos="right"
         >
           All repos →
         </a>
