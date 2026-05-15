@@ -55,7 +55,6 @@ export function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="contact-row"
-              data-tip={c.tip}
             >
               <span className="ic">{c.ic}</span>
               <div className="meta">

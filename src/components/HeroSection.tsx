@@ -53,10 +53,10 @@ export function HeroSection() {
       </p>
 
       <div className="cta-row reveal in" style={{ transitionDelay: "780ms" }}>
-        <a href="#projects" className="btn btn-primary" data-tip="See what I've shipped">
+        <a href="#projects" className="btn btn-primary">
           View projects <span aria-hidden="true">→</span>
         </a>
-        <a href="#skills" className="btn btn-ghost" data-tip="Explore my skills">Skill tree</a>
+        <a href="#skills" className="btn btn-ghost">Skill tree</a>
       </div>
 
       <div className="socials reveal in" style={{ transitionDelay: "880ms" }}>
@@ -67,7 +67,6 @@ export function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={s.l}
-            data-tip={s.tip}
           >
             <s.Icon width={16} height={16} />
           </a>
