@@ -106,7 +106,7 @@ export function ChatWidget() {
           </div>
 
           {/* Messages */}
-          <div className="cw-msgs">
+          <div className="cw-msgs" data-lenis-prevent>
             {messages.map((msg, i) => (
               <div key={i} className={`cw-row ${msg.role}`}>
                 {msg.role === "assistant" && <div className="cw-bot-av"><img src="/nexora.svg" alt="Nexora" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} /></div>}
